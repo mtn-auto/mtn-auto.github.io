@@ -1,0 +1,157 @@
+/* === Main-Styles === */
+@font-face {
+  font-family: harlow;
+  src: url('fonts/harlow Solid Regular.ttf');
+}
+
+* { box-sizing: border-box; }
+
+body {
+  text-align: center;
+  background-color: #101010;
+}
+
+h1,h2,h3 {
+  font-family: harlow;
+  color: #0eadab;
+  font-size: 2rem;
+}
+
+span {
+  font-size: 32px;
+  margin-bottom: 20px;
+  display: block;
+  color: #323232;
+}
+
+p {
+  font-family: arial, sans-serif;
+  color: #fff;
+  font-weight: bold;
+}
+
+ul { list-style: none; padding: 0; }
+img { width: 60%; margin: 0 auto; }
+
+svg { margin: 70px 0; }
+
+/* === ID-Selectors === */
+#header-phone { font-size: 3rem; }
+
+#circles-container { padding-bottom: 75px; }
+
+#contact-container,
+.services {
+  background-color: #232323;
+  padding: 10px 0;
+}
+
+#contact-container div { margin-bottom: 50px; }
+
+#contact-container p { margin: 10px; font-size: 1.25rem;}
+#contact-container h3 { margin-bottom: 15px; }
+.services li img { margin-top: 30px; }
+.services li h3:hover { cursor: pointer; }
+
+#contact-container {
+  width: 90%;
+  border-radius: 10%;
+  margin: 0 auto;
+}
+
+#footer { color: #323232; }
+
+
+/* === Class-Selectors === */
+.hidden-text {
+  display: none;
+  background-color: #323232;
+  padding: 10px;
+  margin: 10px;
+  line-height: 1.25rem;
+  border-radius: 25px;
+}
+
+header {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+span {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin: 0;
+  padding: 0;
+}
+/* === Media Queries === */
+
+@media screen and (min-width: 700px) {
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+
+
+  #header-container {
+    max-height: 100%;
+    height: 600px;
+  }
+
+  svg {
+    width: 75%;
+    height: 100%;
+  }
+
+
+
+  h2 { font-size: 3rem; }
+
+  #circles-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #circles-container li { width: 340px; }
+
+  #contact-container {
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  #contact-container div h1 {
+    padding: 0 10%;
+    margin-bottom: 0;
+  }
+}
+
+
+@media screen and (min-width: 1350px) {
+
+  svg {
+    width: 50%;
+    max-width: 850px;
+  }
+
+  #header-phone { font-size: 4rem; }
+
+  #circles-container {
+    max-width: 1300px;
+    column-gap: 10%;
+    row-gap: 50px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-height: 1300px) {
+  #header-container {
+    height: 900px;
+  }
+}
